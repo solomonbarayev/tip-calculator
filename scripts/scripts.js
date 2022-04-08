@@ -3,7 +3,7 @@ const query = document.querySelector.bind(document);
 const queryAll = document.querySelectorAll.bind(document);
 
 //variables
-const billTotal = query(".form__input_type_bill");
+const billInput = query(".form__input_type_bill");
 const totalTip = query(".output__number_type_total-tip");
 const totalBill = query(".output__number_type_total-bill");
 const percents = queryAll(".form__percent-option");
@@ -14,7 +14,7 @@ const reset = query(".output__reset-button");
 
 let billVal = 0;
 function enterBillValue() {
-  billVal = parseFloat(billTotal.value);
+  billVal = parseFloat(billInput.value);
   calcTip();
 }
 
@@ -28,12 +28,8 @@ function tipClick(event) {
       btn.classList.add("form__percent-option_active");
       //get value of current tip clicked on
       tipPercent = parseFloat(btn.textContent) / 100;
-      if (billTotal.value == "") {
-        totalBill.textContent = "$0.00";
-      }
     }
   });
-
   calcTip();
 }
 
@@ -80,7 +76,7 @@ function resetCalculator() {
 }
 
 //EVENT LISTENERS
-billTotal.addEventListener("input", enterBillValue);
+billInput.addEventListener("input", enterBillValue);
 percents.forEach((btn) => btn.addEventListener("click", tipClick));
 customTip.addEventListener("input", handleCustomTip);
 people.addEventListener("input", handlePeopleInput);
