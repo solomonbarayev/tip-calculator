@@ -1,0 +1,63 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.output {
+  padding: 59px 40px 42px;
+  box-sizing: border-box;
+  @include flexRow();
+  flex-direction: column;
+
+  &__fields {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include flexRow();
+    flex-direction: column;
+    gap: 45px;
+  }
+  &__tip-amount,
+  &__total-amount,
+  &__perperson {
+    margin: 0;
+    color: $white;
+    font-size: 15px;
+  }
+
+  &__perperson {
+    color: $dark-grayish-cyan;
+    font-size: 13px;
+  }
+
+  &__button-container {
+    @include flexRow;
+    flex-direction: column-reverse;
+    flex-grow: 1;
+  }
+
+  &__line {
+    @include flexRow();
+    width: 100%;
+    align-items: stretch;
+  }
+  &__number {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 45px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    color: $primary-cyan;
+  }
+
+  &__reset-button {
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: $primary-cyan;
+    opacity: 0.3;
+    color: $very-dark-cyan;
+  }
+}

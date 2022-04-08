@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="body">
+    <div class="calculator">
+      <div class="calculator__container">
+        <form action="submit" class="calculator__form form">
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="#bill-amount">Bill</label>
+            <span class="form__input-wrapper">
+              <input
+                id="bill-amount"
+                type="number"
+                class="form__input form__input_type_bill"
+                placeholder="0"
+              />
+              <img
+                src="./images/icon-dollar.svg"
+                alt=""
+                class="form__input-icon"
+              />
+            </span>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset_mod_percents">
+            <label class="form__label">Select Tip %</label>
+            <div class="form__percent-options">
+              <button  type="button" class="form__percent-option">5%</button>
+              <button type="button" class="form__percent-option">10%</button>
+              <button type="button" class="form__percent-option">15%</button>
+              <button type="button" class="form__percent-option">25%</button>
+              <button type="button" class="form__percent-option">50%</button>
+              <input
+                class="form__percent-custom"
+                type="number"
+                placeholder="Custom"
+              />
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="#num-people"
+              >Number of People</label
+            >
+            <span class="form__input-wrapper">
+              <input
+                id="num-people"
+                type="number"
+                class="form__input form__input_type_people"
+                placeholder="0"
+              />
+              <img
+                src="./images/icon-person.svg"
+                alt=""
+                class="form__input-icon"
+              />
+          </fieldset>
+        </form>
+        <div class="output calculator__output">
+          <ul class="output__fields">
+            <li class="output__line output__amount">
+              <div class="output__line-text">
+                <h3 class="output__tip-amount">Tip Amount</h3>
+                <p class="output__perperson">/  person</p>
+              </div>
+              <div class="output__number output__number_type_total-tip">$0.00</div>
+            </li>
+            <li class="output__line output__total">
+              <div class="output__line-text">
+              <h3 class="output__total-amount">Total</h3>
+              <p class="output__perperson">/  person</p>
+              </div>
+            <div class="output__number output__number_type_total-bill">$0.00</div>
+            </li>
+          </ul>
+          <div class="output__button-container"> <button type="button" class="output__reset-button">Reset</button>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="./scripts/scripts.js"></script>
+  </body>
+</html>
