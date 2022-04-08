@@ -116,12 +116,12 @@
 }
 
 .form__percent-option_active {
-  background-color: white;
-  color: black;
-  border: black solid 1px;
+  background-color: #26c0ab;
+  color: #00494d;
 }
 
 .form__percent-option:hover {
-  background-color: gray;
+  background-color: #26c0ab;
+  color: #00494d;
 }
 /*# sourceMappingURL=form.css.map */

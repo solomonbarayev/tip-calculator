@@ -54,10 +54,15 @@
     border: none;
     padding: 14px;
     font-size: 16px;
+    font-weight: 700;
     text-transform: uppercase;
     border-radius: 5px;
     background-color: $primary-cyan;
-    opacity: 0.3;
     color: $very-dark-cyan;
+    cursor: pointer;
+
+    &:hover {
+      background-color: hsl(172, 97%, 45%);
+    }
   }
 }
