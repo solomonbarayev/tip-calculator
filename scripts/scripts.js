@@ -55,7 +55,7 @@ function handleCustomTip() {
 
 function calculateTip() {
   if (numPeople >= 1) {
-    if (!isNaN(billVal)) {
+    if (!isNaN(billVal) && billVal > 0) {
       totalTip.textContent = `$${((billVal * tipPercent) / numPeople).toFixed(
         2
       )}`;
@@ -75,6 +75,8 @@ function resetCalculator() {
   percents.forEach((btn) => {
     btn.classList.remove("form__percent-option_active");
   });
+  tipPercent = "0.0";
+  numPeople = 1;
   form.reset();
   totalBill.textContent = "$0.00";
   totalTip.textContent = "$0.00";
