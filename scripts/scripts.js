@@ -15,7 +15,7 @@ const reset = query(".output__reset-button");
 let billVal = 0;
 function enterBillValue() {
   billVal = parseFloat(billTotal.value);
-  calculateTip();
+  calcTip();
 }
 
 let tipPercent = 0;
@@ -34,14 +34,14 @@ function tipClick(event) {
     }
   });
 
-  calculateTip();
+  calcTip();
 }
 
 let numPeople = 1;
 function handlePeopleInput() {
   numPeople = parseInt(people.value);
   numPeople < 1 ? (numPeople = 1) : (numPeople = numPeople);
-  calculateTip();
+  calcTip();
 }
 
 function handleCustomTip() {
@@ -50,10 +50,10 @@ function handleCustomTip() {
   percents.forEach((btn) => {
     btn.classList.remove("form__percent-option_active");
   });
-  calculateTip();
+  calcTip();
 }
 
-function calculateTip() {
+function calcTip() {
   if (numPeople >= 1) {
     if (!isNaN(billVal) && billVal > 0) {
       totalTip.textContent = `$${((billVal * tipPercent) / numPeople).toFixed(
