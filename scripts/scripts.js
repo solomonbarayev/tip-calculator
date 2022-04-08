@@ -63,9 +63,6 @@ function calculateTip() {
         (billVal + tipPercent * 100) /
         numPeople
       ).toFixed(2)}`;
-    } else {
-      billVal = 0;
-      tipPercent = 0;
     }
   }
 }
