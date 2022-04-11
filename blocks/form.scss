@@ -25,7 +25,7 @@
   &__input {
     width: 100%;
     box-sizing: border-box;
-    padding: 6px 0px;
+    padding: 6px 10px;
     border-radius: 5px;
     border: none;
     background-color: $very-light-grayish-cyan;
@@ -78,6 +78,14 @@
     &:hover {
       background-color: $primary-cyan;
       color: $very-dark-cyan;
+    }
+  }
+}
+
+@media screen and (max-width: 853px) {
+  .form {
+    &__fieldset {
+      padding: 10px;
     }
   }
 }

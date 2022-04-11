@@ -99,4 +99,10 @@
 .output__reset-button_active {
   opacity: 1;
 }
+
+@media screen and (max-width: 853px) {
+  .output__reset-button {
+    margin-top: 30px;
+  }
+}
 /*# sourceMappingURL=output.css.map */
