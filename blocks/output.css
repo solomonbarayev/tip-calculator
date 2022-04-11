@@ -89,9 +89,14 @@
   background-color: #26c0ab;
   color: #00494d;
   cursor: pointer;
+  opacity: 0.4;
 }
 
 .output__reset-button:hover {
   background-color: #03e2c4;
+}
+
+.output__reset-button_active {
+  opacity: 1;
 }
 /*# sourceMappingURL=output.css.map */

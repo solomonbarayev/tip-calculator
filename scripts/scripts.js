@@ -52,11 +52,12 @@ function handleCustomTip() {
 function calcTip() {
   if (numPeople >= 1) {
     if (!isNaN(billVal) && billVal > 0) {
+      activateResetButton();
       totalTip.textContent = `$${((billVal * tipPercent) / numPeople).toFixed(
         2
-      )}`;
+      )}`; //.5
       totalBill.textContent = `$${(
-        (billVal + tipPercent * 100) /
+        (billVal + billVal * tipPercent) /
         numPeople
       ).toFixed(2)}`;
     }
@@ -73,6 +74,17 @@ function resetCalculator() {
   form.reset();
   totalBill.textContent = "$0.00";
   totalTip.textContent = "$0.00";
+  //reset.classList.remove("output__reset-button_active");
+  deactivateResetButton();
+}
+
+function activateResetButton() {
+  reset.classList.add("output__reset-button_active");
+  reset.disabled = false;
+}
+function deactivateResetButton() {
+  reset.classList.remove("output__reset-button_active");
+  reset.disabled = true;
 }
 
 //EVENT LISTENERS

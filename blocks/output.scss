@@ -60,9 +60,14 @@
     background-color: $primary-cyan;
     color: $very-dark-cyan;
     cursor: pointer;
+    opacity: 0.4;
 
     &:hover {
       background-color: hsl(172, 97%, 45%);
+    }
+
+    &_active {
+      opacity: 1;
     }
   }
 }

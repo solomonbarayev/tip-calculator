@@ -1,5 +1,7 @@
 .calculator {
   background-color: white;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 30px;
