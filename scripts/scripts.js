@@ -55,7 +55,7 @@ function calcTip() {
       activateResetButton();
       totalTip.textContent = `$${((billVal * tipPercent) / numPeople).toFixed(
         2
-      )}`; //.5
+      )}`;
       totalBill.textContent = `$${(
         (billVal + billVal * tipPercent) /
         numPeople
@@ -74,7 +74,6 @@ function resetCalculator() {
   form.reset();
   totalBill.textContent = "$0.00";
   totalTip.textContent = "$0.00";
-  //reset.classList.remove("output__reset-button_active");
   deactivateResetButton();
 }
 
