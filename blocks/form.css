@@ -95,18 +95,27 @@
 
 .form__percent-custom::-webkit-input-placeholder {
   color: #5e7a7d;
+  text-align: center;
 }
 
 .form__percent-custom:-ms-input-placeholder {
   color: #5e7a7d;
+  text-align: center;
 }
 
 .form__percent-custom::-ms-input-placeholder {
   color: #5e7a7d;
+  text-align: center;
 }
 
 .form__percent-custom::placeholder {
   color: #5e7a7d;
+  text-align: center;
+}
+
+.form__percent-custom::-webkit-outer-spin-button, .form__percent-custom::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .form__percent-option {
